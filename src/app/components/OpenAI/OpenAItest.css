@@ -14,7 +14,13 @@
 
 @media (min-width: 600px) {
     .openAItest-container {
-        grid-column: span 6;
+        width: 80%;
+    }
+}
+
+@media (min-width: 1080px) {
+    .openAItest-container {
+        width: 50%;
     }
 }
 

@@ -1,4 +1,6 @@
-.openAI-page {
+.page {
+  background: radial-gradient(green -100%, black, blue 200%);
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;

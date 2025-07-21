@@ -61,7 +61,7 @@ export default function WeatherByPlace() {
 
   return (
     <div className={styles.container}>
-      <h2>Weather Forecast</h2>
+      <h2 className={styles.header}>Weather Forecast</h2>
       <input
         type="text"
         value={place}

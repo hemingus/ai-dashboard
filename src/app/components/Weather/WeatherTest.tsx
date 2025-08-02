@@ -5,12 +5,14 @@ import styles from './WeatherTest.module.css';
 
 export default function WeatherByPlace() {
   const [place, setPlace] = useState('');
+  const [placeHeader, setPlaceHeader] = useState('');
   const [weather, setWeather] = useState<any>(null);
   const [summary, setSummary] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
   async function fetchWeather() {
+    setPlaceHeader(place);
     setLoading(true);
     setError('');
     setWeather(null);
@@ -86,7 +88,7 @@ export default function WeatherByPlace() {
 
         return (
           <div className={styles.card}>
-            <h3>{place}</h3>
+            <h3>{placeHeader}</h3>
             <p><strong>Forecast time:</strong> {new Date(currentEntry.time).toLocaleString()}</p>
 
             <div className={styles.row}>

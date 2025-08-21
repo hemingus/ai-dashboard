@@ -1,4 +1,5 @@
 .openAItestContainer {
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,26 +8,28 @@
     background: linear-gradient(grey -200%, black);
     border-radius: 1rem;
     padding: 1rem;
+    max-width: 1200px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
     .openAItestContainer {
         width: 80%;
     }
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 1024px) {
     .openAItestContainer {
-        width: 50%;
+        width: 70%;
     }
 }
 
 .openAItestInput {
     width: 100%;
-    background: black;
-    height: 3rem;
-    color: white;
-    font-size: 2rem;
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
 }
 
 .openAItestButton {

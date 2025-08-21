@@ -1,6 +1,6 @@
 .page {
   position: relative;
-  background: rgb(95, 83, 83);
+  background: linear-gradient(skyblue -100%, black 200%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;

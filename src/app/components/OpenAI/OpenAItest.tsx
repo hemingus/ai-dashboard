@@ -1,13 +1,15 @@
 "use client"
 
 import OpenAI from "openai";
-import { useState, useEffect} from 'react'
-import "./OpenAItest.css"
+import { useState } from 'react'
+import styles from './OpenAItest.module.css';
+import { useVoice } from "../../context/VoiceContext";
 
 const OpenAItest = () => {
     const [apiText, setApiText] = useState<string>("Waiting for input...")
     const [loading, setLoading] = useState(false)
     const [word, setWord] = useState<string>("")
+    const { speak } = useVoice();
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setWord(event.target.value);
@@ -35,17 +37,18 @@ const OpenAItest = () => {
       };
   
     return (
-        <div className="openAItest-container">
+        <div className={styles.openAItestContainer}>
             <input
-            className="openAItest-input"
+            className={styles.openAItestInput}
             type="text"
             onChange={handleInputChange}
             value={word}
             placeholder="input text..."
             />
-            {loading ? <h3>Loading...</h3> : <button className="openAItest-button" onClick={fetchCompletion}>Submit</button>}
-            <h3>API response:</h3>
-            <article className="openAItest-response">{loading ? "loading..." : apiText}</article>
+            {loading ? <h3>Loading...</h3> : <button className={styles.openAItestButton} onClick={fetchCompletion}>Submit</button>}
+            
+            <article className={styles.openAItestResponse}>{loading ? "loading..." : apiText}</article>
+            {apiText !== "Waiting for input..." && <button className={styles.speakButton} onClick={e => speak(apiText)}>🔊 Speak</button>}
         </div>
       )
 }

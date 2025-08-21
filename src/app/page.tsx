@@ -1,13 +1,19 @@
 import OpenAItest from "./components/OpenAI/OpenAItest";
-import WeatherTest from "./components/Weather/WeatherTest";
+import WeatherTest from "./components/WeatherTest/WeatherTest";
 import styles from "./page.module.css";
+import { VoiceProvider } from "./context/VoiceContext";
+import VoiceSelector from "./components/VoiceSelector/VoiceSelector";
 
 export default function Home() {
+  
   return (
-    <div className={styles.page}>
-      <h1 className={styles.header}>Ask the AI</h1>
-      <OpenAItest />
-      <WeatherTest />
-    </div>
+    <VoiceProvider>
+      <div className={styles.page}>
+        <h1 className={styles.header}>Ask the AI</h1>
+        <VoiceSelector />
+        <OpenAItest />
+        <WeatherTest />
+      </div>
+    </VoiceProvider>
   );
 }

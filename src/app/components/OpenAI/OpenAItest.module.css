@@ -1,30 +1,27 @@
-.openAItest-container {
-    position: relative;
-    background: linear-gradient(to top right, darkblue -100%, black, darkblue 200%);
+.openAItestContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    background: linear-gradient(grey -200%, black);
+    border-radius: 1rem;
     padding: 1rem;
-    border: solid white 5px;
-    border-radius: 0.5rem;
-    color: white;
 }
 
 @media (min-width: 600px) {
-    .openAItest-container {
+    .openAItestContainer {
         width: 80%;
     }
 }
 
 @media (min-width: 1080px) {
-    .openAItest-container {
+    .openAItestContainer {
         width: 50%;
     }
 }
 
-.openAItest-input {
+.openAItestInput {
     width: 100%;
     background: black;
     height: 3rem;
@@ -32,19 +29,34 @@
     font-size: 2rem;
 }
 
-.openAItest-button {
+.openAItestButton {
     background: radial-gradient(green, yellowgreen);
     padding: 0.5rem;
     cursor: pointer;
 }
 
-.openAItest-button:hover {
+.openAItestButton:hover {
     background: radial-gradient(green, greenyellow);
 
 }
 
-.openAItest-response {
+.openAItestResponse {
     background: linear-gradient(grey -100%, black 50%, grey 200%);
     color: white;
     padding: 1rem;
+}
+
+.speakButton {
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: rgb(0, 20, 80);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+@keyframes blinking {
+    from {opacity: 100%;}
+    to {opacity: 0%;}
 }

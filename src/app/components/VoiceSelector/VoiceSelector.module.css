@@ -1,0 +1,15 @@
+.voiceSelector {
+    background: black;
+    color: yellowgreen;
+    padding: 0.5rem;
+}
+
+.voiceSelectorContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(grey -200%, black);
+    border-radius: 1rem;
+    padding: 1rem;
+}

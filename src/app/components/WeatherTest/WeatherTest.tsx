@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import styles from './WeatherTest.module.css';
+import { useVoice } from "../../context/VoiceContext";
 
 export default function WeatherByPlace() {
   const [place, setPlace] = useState('');
@@ -10,6 +11,7 @@ export default function WeatherByPlace() {
   const [summary, setSummary] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const { speak } = useVoice();
 
   async function fetchWeather() {
     setPlaceHeader(place);
@@ -78,6 +80,7 @@ export default function WeatherByPlace() {
       >
         {loading ? 'Loading...' : 'Get Weather'}
       </button>
+      
 
       {error && <p className={styles.error}>{error}</p>}
 
@@ -113,7 +116,11 @@ export default function WeatherByPlace() {
             {summary && (
               <>
                 <hr className={styles.divider} />
-                <p className={styles.summary}><strong>Summary:</strong> {summary}</p>
+                <div className={styles.summary}>
+                  <p><strong>Summary:</strong> {summary}</p>
+                  <button className={styles.speakbutton} onClick={e => speak(summary)}>🔊 Speak</button>
+                </div>
+                
               </>
             )}
           </div>
@@ -122,4 +129,5 @@ export default function WeatherByPlace() {
     </div>
   );
 }
+
 

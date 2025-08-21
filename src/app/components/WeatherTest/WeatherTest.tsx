@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import styles from './WeatherTest.module.css';
+import containerStyles from '../../../styles/container.module.css'
 import { useVoice } from "../../context/VoiceContext";
 
 export default function WeatherByPlace() {
@@ -64,7 +65,7 @@ export default function WeatherByPlace() {
   }
 
   return (
-    <div className={styles.container}>
+    <div className={`${containerStyles.container} ${styles.container}`}>
       <h2 className={styles.header}>Weather Forecast</h2>
       <input
         type="text"

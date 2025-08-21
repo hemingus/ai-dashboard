@@ -1,27 +1,3 @@
-.openAItestContainer {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    background: linear-gradient(grey -200%, black);
-    border-radius: 1rem;
-    padding: 1rem;
-    max-width: 1200px;
-}
-
-@media (min-width: 768px) {
-    .openAItestContainer {
-        width: 80%;
-    }
-}
-
-@media (min-width: 1024px) {
-    .openAItestContainer {
-        width: 70%;
-    }
-}
 
 .openAItestInput {
     width: 100%;

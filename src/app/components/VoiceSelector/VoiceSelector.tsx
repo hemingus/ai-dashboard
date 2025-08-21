@@ -3,6 +3,7 @@
 import React from "react";
 import styles from "./VoiceSelector.module.css";
 import { useVoice } from "../../context/VoiceContext";
+import containerStyles from '../../../styles/container.module.css'
 
 const VoiceSelector: React.FC = () => {
   const { voices, selectedVoice, setSelectedVoice } = useVoice();
@@ -12,7 +13,7 @@ const VoiceSelector: React.FC = () => {
   }
 
   return (
-    <div className={styles.voiceSelectorContainer}>
+    <div className={containerStyles.container}>
       <h3>Select Voice</h3>
       <select
         className={styles.voiceSelector}

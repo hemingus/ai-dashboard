@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   z-index: 50;
-  background: linear-gradient(skyblue -100%, black 200%);
+  background: linear-gradient(grey -100%, black 200%);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
@@ -21,7 +21,7 @@
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
-  color: #111827;
+  color: skyblue;
 }
 
 .navLinks {
@@ -31,12 +31,12 @@
 .navLink {
   margin-left: 2rem;
   text-decoration: none;
-  color: black;
+  color: white;
   transition: color 0.2s ease-in-out;
 }
 
 .navLink:hover {
-  color: #000000;
+  color: yellowgreen;
 }
 
 .ctaWrapper {

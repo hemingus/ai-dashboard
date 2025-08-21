@@ -20,7 +20,7 @@ export default function Navbar() {
       <div className={styles.navContainer}>
         {/* Logo */}
         <Link href="/" className={styles.logo}>
-          Brand
+          AI-Dashboard
         </Link>
 
         {/* Desktop Nav */}

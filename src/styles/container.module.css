@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    background: linear-gradient(grey -200%, black);
+    background: linear-gradient(rgba(17, 111, 199, 1) -200%, black);
     border-radius: 1rem;
     padding: 1rem;
     max-width: 1200px;

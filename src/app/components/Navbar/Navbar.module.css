@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   z-index: 50;
-  background: linear-gradient(grey -100%, black 200%);
+  background: linear-gradient(rgba(17, 111, 199, 1) -100%, black 200%);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 

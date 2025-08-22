@@ -9,7 +9,7 @@ export async function POST(req: NextRequest) {
   const body = await req.json();
   const { temperature, condition, wind, humidity, location } = body;
 
-  const prompt = `Write a concise and friendly weather forecast summary for ${location} in norwegian. 
+  const prompt = `Write a concise and friendly weather forecast summary for ${location}. 
 It's currently ${temperature}°C with ${condition}, wind at ${wind} m/s, and humidity at ${humidity}%.`;
 
   try {

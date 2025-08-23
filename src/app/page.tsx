@@ -1,5 +1,5 @@
-import OpenAItest from "./components/OpenAI/OpenAItest";
-import WeatherTest from "./components/WeatherTest/WeatherTest";
+import OpenAItest from "./chat/OpenAI/OpenAItest";
+import WeatherTest from "./weather/WeatherTest/WeatherTest";
 import styles from "./page.module.css";
 import { VoiceProvider } from "./context/VoiceContext";
 import VoiceSelector from "./components/VoiceSelector/VoiceSelector";

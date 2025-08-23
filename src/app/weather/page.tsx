@@ -1,4 +1,4 @@
-import WeatherTest from "../components/WeatherTest/WeatherTest";
+import WeatherTest from "./WeatherTest/WeatherTest";
 import styles from "../page.module.css";
 import { VoiceProvider } from "../context/VoiceContext";
 import VoiceSelector from "../components/VoiceSelector/VoiceSelector";

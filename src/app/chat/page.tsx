@@ -1,4 +1,4 @@
-import OpenAItest from "../components/OpenAI/OpenAItest";
+import OpenAItest from "./OpenAI/OpenAItest";
 import styles from "../page.module.css";
 import { VoiceProvider } from "../context/VoiceContext";
 import VoiceSelector from "../components/VoiceSelector/VoiceSelector";

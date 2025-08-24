@@ -6,15 +6,6 @@
     color: white;
 }
 
-.input {
-  width: 100%;
-  padding: 0.6rem 0.8rem;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 0.5rem;
-}
-
 .button {
   padding: 0.6rem 1.2rem;
   font-size: 1rem;

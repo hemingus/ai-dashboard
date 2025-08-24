@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import styles from './WeatherTest.module.css';
 import containerStyles from '../../../styles/container.module.css'
+import inputStyles from '../../../styles/input.module.css'
 import { useVoice } from "../../context/VoiceContext";
 
 export default function WeatherByPlace() {
@@ -72,7 +73,7 @@ export default function WeatherByPlace() {
         value={place}
         placeholder="Enter a place name"
         onChange={(e) => setPlace(e.target.value)}
-        className={styles.input}
+        className={inputStyles.input}
       />
       <button
         onClick={fetchWeather}

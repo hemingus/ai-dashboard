@@ -4,6 +4,7 @@ import OpenAI from "openai";
 import { useState } from 'react'
 import styles from './OpenAItest.module.css';
 import containerStyles from '../../../styles/container.module.css'
+import inputStyles from '../../../styles/input.module.css'
 import { useVoice } from "../../context/VoiceContext";
 
 const OpenAItest = () => {
@@ -40,7 +41,7 @@ const OpenAItest = () => {
     return (
         <div className={containerStyles.container}>
             <input
-            className={styles.openAItestInput}
+            className={inputStyles.input}
             type="text"
             onChange={handleInputChange}
             value={word}

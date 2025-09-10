@@ -13,3 +13,34 @@
   color: white;
   margin: 1rem;
 }
+
+.linksContainer {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.linkCard {
+  background-color: #101f3f;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 220px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.linkCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.linkCard h2 {
+  margin-bottom: 0.5rem;
+}
+
+.linkCard p {
+  color: #555;
+}

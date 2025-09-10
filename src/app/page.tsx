@@ -1,19 +1,38 @@
-import OpenAItest from "./chat/OpenAI/OpenAItest";
-import WeatherTest from "./weather/WeatherTest/WeatherTest";
+
 import styles from "./page.module.css";
-import { VoiceProvider } from "./context/VoiceContext";
-import VoiceSelector from "./components/VoiceSelector/VoiceSelector";
+import Link from "next/link";
+
+interface LinkCardProps {
+  title: string;
+  description: string;
+  href: string;
+}
+
+const LinkCard: React.FC<LinkCardProps> = ({ title, description, href }) => (
+  <Link href={href}>
+    <div className={styles.linkCard}>
+      <h2>{title}</h2>
+      <p>{description}</p>
+    </div>
+  </Link>
+);
+
+const links: LinkCardProps[] = [
+  { title: "AI Chat", description: "Ask questions and get AI-powered answers.", href: "/chat" },
+  { title: "Weather", description: "Check the current weather and forecasts.", href: "/weather" },
+  { title: "About", description: "Learn more about this app and its features.", href: "/about" },
+];
 
 export default function Home() {
-  
   return (
-    <VoiceProvider>
-      <div className={styles.page}>
-        <h1 className={styles.header}>Ask the AI</h1>
-        <VoiceSelector />
-        <OpenAItest />
-        <WeatherTest />
+    <div className={styles.page}>
+      <h1 className={styles.header}>Welcome to Your Dashboard</h1>
+
+      <div className={styles.linksContainer}>
+        {links.map((link) => (
+          <LinkCard key={link.href} {...link} />
+        ))}
       </div>
-    </VoiceProvider>
+    </div>
   );
-}
+};

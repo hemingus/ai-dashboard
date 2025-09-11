@@ -10,8 +10,12 @@
 }
 
 .header {
-  color: white;
+  background: linear-gradient(to top right,black,  rgb(49, 83, 97), black);
+  color: white;;
   margin: 1rem;
+  border-radius: 50%;
+  border: solid 3px hsla(0, 0%, 100%, 0.5);
+  padding: 2rem 3rem;
 }
 
 .linksContainer {
@@ -23,18 +27,21 @@
 }
 
 .linkCard {
-  background-color: #101f3f;
+  background: linear-gradient(to top right,black,  rgb(42, 50, 87), black);
   border-radius: 12px;
   padding: 1.5rem;
   width: 220px;
   text-align: center;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
+  border: solid 3px hsla(0, 0%, 100%, 0.5);
 }
+
 
 .linkCard:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  background: linear-gradient(to top right, black,  rgb(15, 77, 128), black);
 }
 
 .linkCard h2 {
@@ -42,5 +49,5 @@
 }
 
 .linkCard p {
-  color: #555;
+  color: #ffffff;
 }

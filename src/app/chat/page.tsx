@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <VoiceProvider>
       <div className={styles.page}>
-        <h1 className={styles.header}>Chat with AI</h1>
+        <h1 className={styles.header}>Chat</h1>
         <VoiceSelector />
         <OpenAItest />
       </div>

@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 import styles from "./Navbar.module.css";
 
 const navLinks = [
-  { name: "Home", href: "/" },
   { name: "Chat", href: "/chat" },
   { name: "Weather", href: "/weather" }
 ];

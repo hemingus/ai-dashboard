@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <VoiceProvider>
       <div className={styles.page}>
-        <h1 className={styles.header}>Chat with AI</h1>
+        <h1 className={styles.header}>Weather</h1>
         <VoiceSelector />
         <WeatherTest />
       </div>

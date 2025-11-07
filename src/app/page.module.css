@@ -13,9 +13,9 @@
   background: linear-gradient(to top right,black,  rgb(49, 83, 97), black);
   color: white;;
   margin: 1rem;
-  border-radius: 50%;
+  border-radius: 1rem;
   border: solid 3px hsla(0, 0%, 100%, 0.5);
-  padding: 2rem 3rem;
+  padding: 1rem 3rem;
 }
 
 .linksContainer {
@@ -40,7 +40,7 @@
 
 .linkCard:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
   background: linear-gradient(to top right, black,  rgb(15, 77, 128), black);
 }
 

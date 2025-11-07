@@ -25,7 +25,7 @@ const links: LinkCardProps[] = [
 export default function Home() {
   return (
     <div className={styles.page}>
-      <h1 className={styles.header}>Welcome to Your Dashboard</h1>
+      <h1 className={styles.header}>Your Dashboard</h1>
       <div className={styles.linksContainer}>
         {links.map((link) => (
           <LinkCard key={link.href} {...link} />

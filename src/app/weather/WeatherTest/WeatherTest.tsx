@@ -62,7 +62,8 @@ export default function WeatherByPlace() {
   }
 
   function getIconUrl(symbolCode: string) {
-    return `https://api.met.no/images/weathericons/svg/${symbolCode}.svg`;
+    console.log(symbolCode);
+    return `https://api.met.no/weatherapi/weathericon/2.0/?symbol=${symbolCode}&content_type=image/png`;
   }
 
   return (
@@ -97,11 +98,13 @@ export default function WeatherByPlace() {
             <p><strong>Forecast time:</strong> {new Date(currentEntry.time).toLocaleString()}</p>
 
             <div className={styles.row}>
-              <img
-                src={getIconUrl(next1Hour?.summary.symbol_code || 'clearsky_day')}
-                alt="Weather icon"
-                className={styles.icon}
-              />
+              {next1Hour?.summary.symbol_code && (
+                <img
+                  src={getIconUrl(next1Hour.summary.symbol_code)}
+                  alt="Weather icon"
+                  className={styles.icon}
+                />
+              )}
               <p className={styles.heading}>
                 {currentEntry.data.instant.details.air_temperature} °C
               </p>

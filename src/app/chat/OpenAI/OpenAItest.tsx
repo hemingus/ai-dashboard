@@ -1,6 +1,5 @@
 "use client"
 
-import OpenAI from "openai";
 import { useState } from 'react'
 import styles from './OpenAItest.module.css';
 import containerStyles from '../../../styles/container.module.css'
@@ -18,28 +17,30 @@ const OpenAItest = () => {
     }
 
     const fetchCompletion = async () => {
-        const openai = new OpenAI({
-          apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
+      setLoading(true);
 
-          dangerouslyAllowBrowser: true, // Required for frontend usage
+      try {
+        const res = await fetch("/api/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            message: `${word} (respond taking the role of a classy englishman, max 50 words)`
+          })
         });
-  
-        try {
-          const completion = await openai.chat.completions.create({
-            model: "gpt-4o",
-            messages: [{ role: "user", content: `${word} (respond taking the role of a classy englishman, use max 50 words)` }],
-          });
-  
-          setApiText(completion.choices[0].message.content || "No response received.");
-        } catch (error) {
-          console.error("Error fetching data:", error);
-          setApiText("Failed to fetch response.");
-        }
-        setLoading(false)
-      };
+
+        const data = await res.json();
+        setApiText(data.response);
+      } catch (err) {
+        console.error(err);
+        setApiText("Failed to fetch response.");
+      }
+
+      setLoading(false);
+    };
   
     return (
         <div className={containerStyles.container}>
+            <img src="/ai_david.png" alt="Image of the ai companion, David"/>
             <input
             className={inputStyles.input}
             type="text"

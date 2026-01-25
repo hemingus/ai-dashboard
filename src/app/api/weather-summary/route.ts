@@ -9,8 +9,9 @@ export async function POST(req: NextRequest) {
   const body = await req.json();
   const { temperature, condition, wind, humidity, location } = body;
 
-  const prompt = `Write a concise and friendly weather forecast summary in norwegian for ${location}. 
-It's currently ${temperature}°C with ${condition}, wind at ${wind} m/s, and humidity at ${humidity}%.`;
+  const prompt = 
+    `Write a concise and friendly weather forecast summary for ${location}. 
+    It's currently ${temperature}°C with ${condition}, wind at ${wind} m/s, and humidity at ${humidity}%.`;
 
   try {
     const chat = await openai.chat.completions.create({

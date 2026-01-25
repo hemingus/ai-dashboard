@@ -1,18 +1,22 @@
 .openAItestButton {
-    background: radial-gradient(green, yellowgreen);
-    padding: 0.5rem;
+    background-color: rgba(30,50,80,0.5);
+    padding: 0.5rem 1rem;
     cursor: pointer;
+    border-radius: 1rem;
+    font-size: 1.2rem;
 }
 
 .openAItestButton:hover {
-    background: radial-gradient(green, greenyellow);
-
+    background-color: rgba(0, 102, 255, 0.5);
+    transition: 0.2s ease-out;
+    transform: scale(105%);
 }
 
 .openAItestResponse {
     background: linear-gradient(grey -100%, black 50%, grey 200%);
     color: white;
     padding: 1rem;
+    border-radius: 1rem;
 }
 
 .speakButton {
